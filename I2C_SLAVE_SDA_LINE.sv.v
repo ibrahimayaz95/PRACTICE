@@ -8,7 +8,7 @@ logic enable;				//Enable signal
 logic sda_slave_read;		//Data Read
 logic sda_in;				//tri type decleration activator signal
 
-enum {slave_drive,slave_sample,idle} present_state_slave, next_state_slave;
+  enum {slave_sample, slave_drive, idle} present_state_slave, next_state_slave;
 
 assign io_sda = enable ? sda_in : 1'bz; //If enable signal gets 1, io_sda switch will gets sda_in signal or open circuit
 
